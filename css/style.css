@@ -3,7 +3,18 @@ margin: 0;
 }
 
 
-
+.footer{
+grid-area: fo;
+background: #323B44;
+    border-bottom: 1px solid #414f5a;
+    color: #A1A1A1;
+    padding: 50px 0;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .topnav{
   grid-area: "nav";
 }
@@ -17,18 +28,14 @@ margin: 0;
   position: relative;
   text-align: center;
   color: white;
+  overflow: hidden;
   grid-area: sec; /* dont forget that this might be changed*/
-}
-.Bildtext {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
     overflow: hidden;
+    transition: all 0.3s;
   }
   
   /* Style the links inside the navigation bar */
@@ -98,7 +105,14 @@ margin: 0;
     grid-template-areas: 
     "nav" "nav" "nav" 
     "sec" "sec" "sec"
+    "fo" "fo" "fo"
     ;
+    }
+    .Bildtext {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     .pictures {
       grid-template-columns: 1fr 1fr;
@@ -107,6 +121,13 @@ margin: 0;
       "pic2" "pic2"
       
       ;
+    }
+    .Adoptivtext {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: red;
     }
   /*Fönster med större brädd än 600px*/
   @media screen and (min-width: 600px) {
@@ -133,12 +154,19 @@ margin: 0;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     "nav" "nav" "nav"  "nav"
-    "sec" "sec" "sec" "sec"  
+    "sec" "sec" "sec" "sec" 
+    "fo" "fo" "fo" "fo"
   ;
   }
   .pictures {
     grid-template-areas:
     "pic" "pic2"
     ;
+  }
+  .Bildtext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   }
