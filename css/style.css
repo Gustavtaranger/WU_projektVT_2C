@@ -2,6 +2,32 @@
 margin: 0;
 }
 
+.brödtext{
+grid-area: br;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+background-color: bisque;
+text-align: center;
+font-size: 20px;
+}
+.Headline{ 
+  text-align: center;
+  font-size: 30px;
+}
+.kontakta{
+list-style: none;
+}
+color: #f2f2f2;
+position: relative;
+margin: 0px 0px 20px;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  transform: translate(0, 0);
+}
 
 .footer{
 grid-area: fo;
@@ -20,16 +46,18 @@ background: #323B44;
 }
 .defaultimg{
   grid-area: "pic";
+  display: flex;
 }
 .bild{
   grid-area: "pic2";
+  display: flex;
 }
 .pictures {
   position: relative;
   text-align: center;
   color: white;
   overflow: hidden;
-  grid-area: sec; /* dont forget that this might be changed*/
+  grid-area: "sec"; /* dont forget that this might be changed*/
 }
 /* Add a black background color to the top navigation */
 .topnav {
@@ -101,10 +129,11 @@ background: #323B44;
   }
    .container { 
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "nav" "nav" "nav" 
     "sec" "sec" "sec"
+    "br" "br" "br" 
     "fo" "fo" "fo"
     ;
     }
@@ -136,7 +165,6 @@ background: #323B44;
     max-height: 600px;
     margin: 0px;
     padding: 0px;
-    float: left;
     border: 1px;
     border-color: #333;
    }
@@ -145,20 +173,21 @@ background: #323B44;
   max-height: 600px;
   margin: 0px;
   padding: 0px;
-  float: right;
   border: 1px;
   border-color: #333;
   }
   .container { 
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
     grid-template-areas: 
     "nav" "nav" "nav"  "nav"
-    "sec" "sec" "sec" "sec" 
+    "sec" "sec" "sec" "sec"
+    "br" "br" "br" "br" 
     "fo" "fo" "fo" "fo"
   ;
   }
   .pictures {
+    display: flex;
     grid-template-areas:
     "pic" "pic2"
     ;
